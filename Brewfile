@@ -43,4 +43,4 @@ cask 'aerial'
 cask 'whatsapp'
 cask 'nightowl'
 cask 'appcleaner'
-
+cask '1password'
