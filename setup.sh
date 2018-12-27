@@ -46,6 +46,13 @@ if [[ $? != 0 ]]; then
 fi
 ok "brew bundle complete";
 
+bot "installing go tools"
+mkdir -p $GOPATH/src $GOPATH/pkg $GOPATH/bin
+go get -u github.com/derekparker/delve/cmd/dlv
+go get -u github.com/alecthomas/gometalinter
+gometalinter --install
+ok
+
 # do some ruby specific stuff
 RUBY_VERSION=2.5.3
 echo "🦄  ruby" $RUBY_VERSION
@@ -97,9 +104,16 @@ if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
   ok
 fi
 
-for extension in "PKief.material-icon-theme" "zhuangtongfa.Material-theme"; do
+bot "installing visual-studio-code extensions" 
+for extension in "PKief.material-icon-theme" "zhuangtongfa.Material-theme" "ms-vscode.go" "peterjausovec.vscode-docker"; do
 	code --install-extension "${extension}"
 done
+ok 
+
+bot "installing nano syntax highlighting"
+git clone git@github.com:scopatz/nanorc.git ~/.nano
+ok
+
 
 running "sourcing zshrc"
 source ~/.zshrc
