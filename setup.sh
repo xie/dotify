@@ -32,9 +32,6 @@ else
         error "unable to install homebrew -> quitting setup"
         exit 2
     fi
-    running "updating to most recent brew version"
-    brew doctor
-    brew update
     ok
 fi
 
@@ -58,25 +55,22 @@ ok
 # do some ruby specific stuff
 RUBY_VERSION=2.5.3
 echo "🦄  ruby" $RUBY_VERSION
-running "rbenv install"
+running "rbenv install {$RUBY_VERSION}"
 rbenv install -s $RUBY_VERSION
 rbenv global $RUBY_VERSION
 ok rbenv
 
 running "downloading oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-if [[ $? != 0 ]]; then
-  error "unable to install oh-my-zsh -> quitting setup"
-  exit 2
-fi
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 ok oh-my-zsh
 
 running "downloading Meslo Font"
-wget --quiet https://github.com/powerline/fonts/blob/master/Meslo%20Slashed/Meslo%20LG%20M%20Regular%20for%20Powerline.ttf -P ~/Downloads/
+wget --quiet https://raw.githubusercontent.com/powerline/fonts/master/Meslo%20Slashed/Meslo%20LG%20M%20Regular%20for%20Powerline.ttf -P ~/Downloads/
 ok "Meslo Font"
 
 running "downloading Argonaut.itermcolors"
 wget --quiet https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Argonaut.itermcolors -P ~/Downloads/
+wget --quiet https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/terminal/Argonaut.terminal -P ~/Downloads/
 ok "Argonaut.itermcolors"
 
 # hard link .zshrc
