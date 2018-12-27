@@ -63,9 +63,12 @@ fi
 ok oh-my-zsh
 
 running "downloading Meslo Font"
-wget https://github.com/powerline/fonts/blob/master/Meslo%20Slashed/Meslo%20LG%20M%20Regular%20for%20Powerline.ttf -P ~/
+wget --quiet https://github.com/powerline/fonts/blob/master/Meslo%20Slashed/Meslo%20LG%20M%20Regular%20for%20Powerline.ttf -P ~/Downloads/
 ok "Meslo Font"
 
+running "downloading Argonaut.itermcolors"
+wget --quiet https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Argonaut.itermcolors -P ~/Downloads/
+ok "Argonaut.itermcolors"
 
 # hard link .zshrc
 running "linking your .zshrc!"
