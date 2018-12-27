@@ -11,7 +11,7 @@ xcode-select --install
 # set computer info
 set_computer_info
 
-# copy dotfiles 
+# copy dotfiles
 mkdir ~/.dotfiles/
 cp config/.* ~/.dotfiles/
 cp zsh_files/.* ~/.dotfiles/
@@ -47,6 +47,8 @@ fi
 ok "brew bundle complete";
 
 bot "installing go tools"
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 mkdir -p $GOPATH/src $GOPATH/pkg $GOPATH/bin
 go get -u github.com/derekparker/delve/cmd/dlv
 go get -u github.com/alecthomas/gometalinter
@@ -79,12 +81,18 @@ ok "Argonaut.itermcolors"
 
 # hard link .zshrc
 running "linking your .zshrc!"
+rm ~/.zshrc
 ln ~/.dotfiles/.zshrc ~/.zshrc
 ok
 
 # hard link .gitconfig
 running "linking .gitconfig"
 ln ~/.dotfiles/.gitconfig ~/.gitconfig
+ok
+
+# hard link .gitignore
+running "linking .gitignore"
+ln ~/.dotfiles/.gitignore ~/.gitignore
 ok
 
 # setup git credentials
@@ -104,14 +112,15 @@ if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
   ok
 fi
 
-bot "installing visual-studio-code extensions" 
+bot "installing visual-studio-code extensions"
 for extension in "PKief.material-icon-theme" "zhuangtongfa.Material-theme" "ms-vscode.go" "peterjausovec.vscode-docker"; do
 	code --install-extension "${extension}"
 done
-ok 
+ok
 
 bot "installing nano syntax highlighting"
-git clone git@github.com:scopatz/nanorc.git ~/.nano
+git clone https://github.com/scopatz/nanorc.git ~/.nano
+cat ~/.nano/nanorc >> ~/.nanorc
 ok
 
 

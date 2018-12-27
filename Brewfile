@@ -3,6 +3,7 @@ cask_args appdir: '/Applications'
 # taps
 tap 'caskroom/homebrew-cask' || true
 tap 'homebrew/core' || true
+tap 'homebrew/cask-drivers' || true
 
 # version control
 brew 'git'
@@ -44,3 +45,4 @@ cask 'whatsapp'
 cask 'nightowl'
 cask 'appcleaner'
 cask '1password'
+cask 'yubico-authenticator'
