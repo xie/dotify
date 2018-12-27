@@ -42,4 +42,5 @@ cask 'vlc'
 cask 'aerial'
 cask 'whatsapp'
 cask 'nightowl'
+cask 'appcleaner'
 

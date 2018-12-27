@@ -49,7 +49,7 @@ ok "brew bundle complete";
 # do some ruby specific stuff
 RUBY_VERSION=2.5.3
 echo "🦄  ruby" $RUBY_VERSION
-running rbenv install -s $RUBY_VERSION
+running "rbenv install -s $RUBY_VERSION"
 rbenv install -s $RUBY_VERSION
 rbenv global $RUBY_VERSION
 ok rbenv
