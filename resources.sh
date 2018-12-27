@@ -61,3 +61,12 @@ function set_git_info() {
   git config --global user.name $name
   git config --global user.email $email
 }
+
+function SSH_Keygen() {
+  echo -n "\n$COL_MAGENTA set your email$COL_RESET:"
+  read email
+  ssh-keygen -t rsa -b 4096 -C $email
+  eval "$(ssh-agent -s)"
+  cat sshconfig > ~/.ssh/config
+  ssh-add -K ~/.ssh/id_rsa
+}

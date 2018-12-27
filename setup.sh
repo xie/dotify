@@ -55,7 +55,7 @@ ok
 # do some ruby specific stuff
 RUBY_VERSION=2.5.3
 echo "🦄  ruby" $RUBY_VERSION
-running "rbenv install {$RUBY_VERSION}"
+running "rbenv install ruby:$RUBY_VERSION"
 rbenv install -s $RUBY_VERSION
 rbenv global $RUBY_VERSION
 ok rbenv
@@ -75,7 +75,6 @@ ok "Argonaut.itermcolors"
 
 # hard link .zshrc
 running "linking your .zshrc!"
-rm ~/.zshrc
 ln ~/.dotfiles/.zshrc ~/.zshrc
 ok
 
@@ -121,4 +120,5 @@ ok
 running "sourcing zshrc"
 source ~/.zshrc
 ok
+SSH_Keygen
 bot "Setup complete";
