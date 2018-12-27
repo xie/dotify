@@ -2,6 +2,9 @@
 	name = YOUR NAME
 	email = YOUR EMAIL
 
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+
 [core]
 	editor = nano
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol, space-before-tab
