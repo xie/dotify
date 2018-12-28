@@ -73,6 +73,11 @@ wget --quiet https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/ma
 wget --quiet https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/terminal/Argonaut.terminal -P ~/Downloads/
 ok "Argonaut.itermcolors"
 
+bot "installing nano syntax highlighting"
+git clone https://github.com/scopatz/nanorc.git ~/.nano
+cat ~/.nano/nanorc >> ~/.nanorc
+ok
+
 # hard link .zshrc
 running "linking your .zshrc!"
 ln ~/.dotfiles/.zshrc ~/.zshrc
@@ -110,12 +115,6 @@ for extension in "PKief.material-icon-theme" "zhuangtongfa.Material-theme" "ms-v
 	code --install-extension "${extension}"
 done
 ok
-
-bot "installing nano syntax highlighting"
-git clone https://github.com/scopatz/nanorc.git ~/.nano
-cat ~/.nano/nanorc >> ~/.nanorc
-ok
-
 
 running "sourcing zshrc"
 source ~/.zshrc
