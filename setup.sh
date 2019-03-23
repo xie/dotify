@@ -60,6 +60,11 @@ rbenv install -s $RUBY_VERSION
 rbenv global $RUBY_VERSION
 ok rbenv
 
+running "npm settings"
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
+ok npm-settings
+
 running "downloading oh-my-zsh"
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 ok oh-my-zsh
