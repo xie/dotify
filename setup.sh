@@ -48,8 +48,6 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 mkdir -p $GOPATH/src $GOPATH/pkg $GOPATH/bin
 go get -u github.com/derekparker/delve/cmd/dlv
-go get -u github.com/alecthomas/gometalinter
-gometalinter --install
 ok
 
 # do some ruby specific stuff
