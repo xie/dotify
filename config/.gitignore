@@ -1,3 +1,4 @@
+
 /.buildpath
 /build/
 */archive/
@@ -21,3 +22,4 @@ __MACOSX
 Icon?
 thumbs.db
 Thumbs.db
+.idea/
