@@ -41,6 +41,7 @@ brew 'autoconf'
 brew 'automake'
 brew 'nmap'
 brew 'skaffold'
+brew 'diff-so-fancy'
 
 cask 'google-cloud-sdk'
 cask 'gpg-suite'
