@@ -14,7 +14,7 @@
 	gpgsign = true
 
 [web]
-	browser = safari
+	browser = chrome
 
 [rerere]
 	enabled = 1
