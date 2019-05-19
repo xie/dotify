@@ -54,6 +54,7 @@ Repo
 .byebug_history
 .pry_history
 .bundle
+.rubocop*
 
 # direnv
 .envrc

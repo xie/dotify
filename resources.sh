@@ -52,21 +52,11 @@ function set_computer_info() {
     sudo scutil --set LocalHostName "$cpname"
 }
 
-function set_git_info() {
-  echo -n "\n$COL_MAGENTA set your github username$COL_RESET: "
-  read name
-  echo -n "\n$COL_MAGENTA set your github email$COL_RESET: "
-  read email
-
-  git config --global user.name $name
-  git config --global user.email $email
-}
-
 function SSH_Keygen() {
   echo -n "\n$COL_MAGENTA set your email$COL_RESET:"
   read email
-  ssh-keygen -t rsa -b 4096 -C $email
+  ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C $email
   eval "$(ssh-agent -s)"
   cat sshconfig > ~/.ssh/config
-  ssh-add -K ~/.ssh/id_rsa
+  ssh-add -K ~/.ssh/id_ed25519
 }

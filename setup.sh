@@ -96,15 +96,6 @@ running "linking .gitignore"
 ln ~/.dotfiles/.gitignore ~/.gitignore
 ok
 
-# setup git credentials
-yes_or_no "Would you like to set your git credentials now?"
-if confirmed; then
-  set_git_info
-else
-  bot "ok, but remember to do it before your first commit! "
-fi
-
-
 bot "setting zsh as the user shell"
 CURRENTSHELL=$(dscl . -read /Users/$USER UserShell | awk '{print $2}')
 if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then

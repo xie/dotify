@@ -36,4 +36,4 @@ complete -o default -F __start_kubectl k
 alias git=hub
 
 eval "$(rbenv init -)"
-
+eval "$(gel shell-setup)"
