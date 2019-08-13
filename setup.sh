@@ -78,6 +78,7 @@ ok "Argonaut.itermcolors"
 
 bot "installing nano syntax highlighting"
 git clone https://github.com/scopatz/nanorc.git ~/.nano
+cat "set linenumbers" >> ~/.nanorc
 cat ~/.nano/nanorc >> ~/.nanorc
 ok
 
