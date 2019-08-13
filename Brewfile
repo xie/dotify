@@ -19,7 +19,6 @@ brew 'rbenv'
 brew 'ruby-build'
 brew 'rust'
 
-
 # utilities
 brew 'wget'
 brew 'watch'
@@ -33,7 +32,7 @@ brew 'zsh-history-substring-search'
 brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
 brew 'bash'
-brew 'ag'
+brew 'rg'
 brew 'k9s'
 brew 'fzf'
 brew 'dep'

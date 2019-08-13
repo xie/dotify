@@ -51,7 +51,7 @@ go get -u github.com/derekparker/delve/cmd/dlv
 ok
 
 # do some ruby specific stuff
-RUBY_VERSION=2.5.3
+RUBY_VERSION=2.6.3
 echo "🦄  ruby" $RUBY_VERSION
 running "rbenv install ruby:$RUBY_VERSION"
 rbenv install -s $RUBY_VERSION
@@ -99,15 +99,13 @@ ok
 bot "setting zsh as the user shell"
 CURRENTSHELL=$(dscl . -read /Users/$USER UserShell | awk '{print $2}')
 if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
-  bot "setting newer homebrew zsh (/usr/local/bin/zsh) as your shell (password required)"
-  sudo dscl . -change /Users/$USER UserShell $SHELL /usr/local/bin/zsh > /dev/null 2>&1
-  ok
+    bot "setting newer homebrew zsh (/usr/local/bin/zsh) as your shell (password required)"
+    sudo dscl . -change /Users/$USER UserShell $SHELL /usr/local/bin/zsh > /dev/null 2>&1
+    ok
 fi
 
 bot "installing visual-studio-code extensions"
-for extension in "PKief.material-icon-theme" "zhuangtongfa.Material-theme" "ms-vscode.go" "peterjausovec.vscode-docker"; do
-	code --install-extension "${extension}"
-done
+code --install-extension "shan.code-settings-sync"
 ok
 
 running "sourcing zshrc"
