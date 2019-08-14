@@ -81,9 +81,16 @@ helmins() {
  kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
  helm init --service-account=tiller
 }
+
 # delete helm
 helmdel() {
  kubectl -n kube-system delete deployment tiller-deploy
  kubectl delete clusterrolebinding tiller
  kubectl -n kube-system delete serviceaccount tiller
 }
+
+# Visualize traceroute
+function traceroute-mapper {
+  open "https://stefansundin.github.io/traceroute-mapper/?trace=$(traceroute -q1 $*)"
+}
+
