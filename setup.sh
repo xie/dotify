@@ -14,7 +14,7 @@ set_computer_info
 # copy dotfiles
 mkdir ~/.dotfiles/
 cp config/.* ~/.dotfiles/
-cp zsh_files/.* ~/.dotfiles/
+cp zsh_files/.* ~/.dotfiles/zsh_files/
 cp .zshrc ~/.dotfiles/
 
 # homebrew

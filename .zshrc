@@ -31,9 +31,17 @@ source $ZSH/oh-my-zsh.sh
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
+for file in ~/.dotfiles/zsh_files/.{aliases,functions}; do
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+
 #kubectl-short-aliases
 alias k=kubectl
 complete -o default -F __start_kubectl k
+
+# Neovim
+alias vi=nvim
+alias vim=nvim
 
 #hub => git
 if [ -x "$(command -v hub)" ]; then

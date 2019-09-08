@@ -83,13 +83,3 @@
 
 [merge]
 	conflictstyle = diff3
-
-[alias]
-  # Short command names
-  st = status
-  co = checkout
-  eb = enhanced-blame
-  head = rev-parse HEAD
-  subup = submodule update --init --recursive
-  fpush = push --force-with-lease
-  reword = commit --amend
