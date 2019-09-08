@@ -35,6 +35,11 @@ else
     ok
 fi
 
+running "brew install mas"
+brew install mas
+running "mas signin"
+mas signin
+
 running "Running brew bundle...";
 brew bundle;
 if [[ $? != 0 ]]; then
@@ -43,14 +48,10 @@ if [[ $? != 0 ]]; then
 fi
 ok "brew bundle complete";
 
-bot "installing go tools"
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+export GOPATH=$HOME
 mkdir -p $GOPATH/src $GOPATH/pkg $GOPATH/bin
-go get -u github.com/derekparker/delve/cmd/dlv
-ok
 
-# do some ruby specific stuff
+# setup rbenv & install ruby 
 RUBY_VERSION=2.6.3
 echo "🦄  ruby" $RUBY_VERSION
 running "rbenv install ruby:$RUBY_VERSION"
@@ -66,10 +67,6 @@ ok npm-settings
 running "downloading oh-my-zsh"
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 ok oh-my-zsh
-
-running "downloading Meslo Font"
-wget --quiet https://raw.githubusercontent.com/powerline/fonts/master/Meslo%20Slashed/Meslo%20LG%20M%20Regular%20for%20Powerline.ttf -P ~/Downloads/
-ok "Meslo Font"
 
 running "downloading Argonaut.itermcolors"
 wget --quiet https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Argonaut.itermcolors -P ~/Downloads/

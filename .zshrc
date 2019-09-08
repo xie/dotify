@@ -1,6 +1,6 @@
 DEFAULT_USER=adi
 export ZSH="/Users/adi/.oh-my-zsh"
-export GOPATH=$HOME/go
+export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
 export EDITOR=nano
 export PATH=~/.npm-global/bin:$PATH
@@ -33,7 +33,15 @@ alias k=kubectl
 complete -o default -F __start_kubectl k
 
 #hub => git
-alias git=hub
+if [ -x "$(command -v hub)" ]; then
+  eval "$(hub alias -s)"
+fi
 
-eval "$(rbenv init -)"
-eval "$(gel shell-setup)"
+if [ -x "$(command -v gel)" ]; then
+  eval "$(gel shell-setup)"
+fi
+
+if [ -x "$(command -v rbenv)" ]; then
+  eval "$(rbenv init -)"
+fi
+
