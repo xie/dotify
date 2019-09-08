@@ -12,21 +12,24 @@ export UPDATE_ZSH_DAYS=5
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(
-  git
+  autoupdate
+  autojump
   colorize
   colored-man-pages
-  docker-compose
   docker
+  docker-compose
+  fast-syntax-highlighting
+  git
+  history-substring-search
+  vscode
+  you-should-use
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
 
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
-
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 #kubectl-short-aliases
 alias k=kubectl
@@ -45,3 +48,5 @@ if [ -x "$(command -v rbenv)" ]; then
   eval "$(rbenv init -)"
 fi
 
+# Enable autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh

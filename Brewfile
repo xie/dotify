@@ -58,9 +58,6 @@ brew 'watch'
 brew 'wget'
 brew 'yq'
 brew 'zsh'
-brew 'zsh-history-substring-search'
-brew 'zsh-autosuggestions'
-brew 'zsh-syntax-highlighting'
 
 # applications
 cask '1password'

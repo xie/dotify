@@ -68,6 +68,31 @@ running "downloading oh-my-zsh"
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 ok oh-my-zsh
 
+running "installing zsh-autosuggestions"
+git clone https://github.com/zsh-users/zsh-autosuggestions.git \
+  ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+ok
+
+running "installing zsh-history-substring-search"
+git clone https://github.com/zsh-users/zsh-history-substring-search \
+  ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search
+ok
+
+running "installing zsh-fast-syntax-highlighting"
+git clone https://github.com/zdharma/fast-syntax-highlighting.git \
+  ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
+ok
+
+running "installing zsh-you-should-use"
+git clone https://github.com/MichaelAquilina/zsh-you-should-use.git \
+  ~/.oh-my-zsh/custom/plugins/you-should-use
+ok
+
+running "installing zsh-plugins-autoupdate"
+git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins.git \
+  ~/.oh-my-zsh/custom/plugins/autoupdate
+ok
+
 running "downloading Argonaut.itermcolors"
 wget --quiet https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Argonaut.itermcolors -P ~/Downloads/
 wget --quiet https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/terminal/Argonaut.terminal -P ~/Downloads/
