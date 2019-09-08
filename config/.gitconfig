@@ -17,7 +17,7 @@
 	verbose = true
 
 [web]
-	browser = chrome
+	browser = safari
 
 [rerere]
 	enabled = 1
