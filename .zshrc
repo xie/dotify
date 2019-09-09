@@ -55,6 +55,3 @@ fi
 if [ -x "$(command -v rbenv)" ]; then
   eval "$(rbenv init -)"
 fi
-
-# Enable autojump
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
