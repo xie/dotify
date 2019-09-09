@@ -100,7 +100,7 @@ ok "Argonaut.itermcolors"
 
 bot "installing nano syntax highlighting"
 git clone https://github.com/scopatz/nanorc.git ~/.nano
-cat "set linenumbers" >> ~/.nanorc
+echo "set linenumbers" >> ~/.nanorc
 cat ~/.nano/nanorc >> ~/.nanorc
 ok
 
@@ -136,3 +136,6 @@ source ~/.zshrc
 ok
 SSH_Keygen
 bot "Setup complete";
+
+bot "Add the following sshkey to Github at https://github.com/settings/ssh/new "
+cat ~/.ssh/id_ed25519.pub
