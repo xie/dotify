@@ -48,10 +48,6 @@ if [ -x "$(command -v hub)" ]; then
   eval "$(hub alias -s)"
 fi
 
-if [ -x "$(command -v gel)" ]; then
-  eval "$(gel shell-setup)"
-fi
-
 if [ -x "$(command -v rbenv)" ]; then
   eval "$(rbenv init -)"
 fi
