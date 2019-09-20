@@ -10,6 +10,7 @@ tap 'homebrew/cask-drivers' || true
 tap 'homebrew/cask-fonts' || true
 tap 'homebrew/cask-versions' || true
 tap 'homebrew/core' || true
+tap 'homebrew/services' || true
 
 # fonts
 cask 'font-meslo-lg'
@@ -38,17 +39,21 @@ brew 'bash'
 brew 'bat'
 brew 'dep'
 brew 'diff-so-fancy'
+brew 'dnscrypt-proxy', restart_service: true
 brew 'fd'
+brew 'ffmpeg'
 brew 'fzf'
 brew 'openssl'
 brew 'jq'
-brew 'jupyter'
 brew 'kubernetes-cli'
+brew 'kubernetes-helm'
 brew 'lsd'
 brew 'markdown'
+brew 'mas'
+brew 'mysql'
 brew 'nano'
 brew 'nmap'
-brew 'nvim'
+brew 'neovim'
 brew 'ripgrep'
 brew 'shellcheck'
 brew 'skaffold'
@@ -62,20 +67,23 @@ brew 'zsh'
 cask '1password'
 cask 'aerial'
 cask 'appcleaner'
-cask 'bartender'
+cask 'beardedspice'
 cask 'docker-edge'
+cask 'go2shell'
 cask 'goland'
 cask 'google-cloud-sdk'
-cask 'google-chrome'
-cask 'go2shell'
 cask 'gpg-suite'
 cask 'iina'
 cask 'iterm2'
+cask 'java'
 cask 'open-in-code'
+cask 'slack'
 cask 'spectacle'
-cask 'touchswitcher'
 cask 'visual-studio-code'
 cask 'yubico-authenticator'
 
 # appstore apps
+mas "Backtrack", id: 1477089520
+mas "Pages", id: 409201541
+mas "Wipr", id: 1320666476
 mas 'WireGuard', id: 1451685025

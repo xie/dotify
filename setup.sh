@@ -35,11 +35,6 @@ else
     ok
 fi
 
-running "brew install mas"
-brew install mas
-running "mas signin"
-mas signin
-
 running "Running brew bundle...";
 brew bundle;
 if [[ $? != 0 ]]; then
