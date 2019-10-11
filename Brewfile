@@ -4,7 +4,6 @@ cask_args appdir: '/Applications'
 tap 'azure/draft' || true
 tap 'beeftornado/rmtree' || true
 tap 'buo/cask-upgrade' || true
-tap 'caskroom/cask' || true
 tap 'homebrew/bundle' || true
 tap 'homebrew/cask' || true
 tap 'homebrew/cask-drivers' || true
@@ -43,7 +42,7 @@ brew 'cmake'
 brew 'coreutils'
 brew 'dep'
 brew 'diff-so-fancy'
-brew 'dnscrypt-proxy', restart_service: true
+brew 'dnscrypt-proxy'
 brew 'draft'
 brew 'fd'
 brew 'ffmpeg'
