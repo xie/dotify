@@ -35,11 +35,6 @@ else
     ok
 fi
 
-running "copying dnscrypt-proxy.toml to /usr/local/etc/"
-mkdir -p /usr/local/etc/
-cp dnscrypt-proxy.toml /usr/local/etc/dnscrypt-proxy.toml
-ok
-
 running "Running brew bundle...";
 brew bundle;
 if [[ $? != 0 ]]; then
@@ -48,8 +43,14 @@ if [[ $? != 0 ]]; then
 fi
 ok "brew bundle complete";
 
+running "copying dnscrypt-proxy.toml to /usr/local/etc/"
+mkdir -p /usr/local/etc/
+cp dnscrypt-proxy.toml /usr/local/etc/dnscrypt-proxy.toml
+ok
+
 running "setting DNS resolver to local proxy"
-networksetup -setdnsservers Wi-Fi 0.0.0.0
+sudo brew services start dnscrypt-proxy
+networksetup -setdnsservers Wi-Fi 127.0.0.1
 dscacheutil -flushcache
 ok
 
@@ -57,7 +58,7 @@ export GOPATH=$HOME
 mkdir -p $GOPATH/src $GOPATH/pkg $GOPATH/bin
 
 # setup rbenv & install ruby 
-RUBY_VERSION=2.6.3
+RUBY_VERSION=2.6.5
 echo "🦄  ruby" $RUBY_VERSION
 running "rbenv install ruby:$RUBY_VERSION"
 rbenv install -s $RUBY_VERSION
@@ -140,7 +141,8 @@ running "sourcing zshrc"
 source ~/.zshrc
 ok
 SSH_Keygen
-bot "Setup complete";
+bot "Setup complete"
 
-bot "Add the following sshkey to Github at https://github.com/settings/ssh/new "
+bot "Add the following sshkey to Github at https://github.com/settings/ssh/new"
 cat ~/.ssh/id_ed25519.pub
+ok
