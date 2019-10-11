@@ -1,6 +1,7 @@
 cask_args appdir: '/Applications'
 
 # taps
+tap 'azure/draft' || true
 tap 'beeftornado/rmtree' || true
 tap 'buo/cask-upgrade' || true
 tap 'caskroom/cask' || true
@@ -43,6 +44,7 @@ brew 'coreutils'
 brew 'dep'
 brew 'diff-so-fancy'
 brew 'dnscrypt-proxy', restart_service: true
+brew 'draft'
 brew 'fd'
 brew 'ffmpeg'
 brew 'fzf'
@@ -57,6 +59,7 @@ brew 'mysql'
 brew 'nano'
 brew 'nmap'
 brew 'neovim'
+brew 'protobuf'
 brew 'ripgrep'
 brew 'shellcheck'
 brew 'skaffold'
@@ -72,6 +75,7 @@ cask 'aerial'
 cask 'appcleaner'
 cask 'beardedspice'
 cask 'docker-edge'
+cask 'firefox'
 cask 'go2shell'
 cask 'goland'
 cask 'google-cloud-sdk'
