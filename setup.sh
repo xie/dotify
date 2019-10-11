@@ -35,6 +35,11 @@ else
     ok
 fi
 
+running "copying dnscrypt-proxy.toml to /usr/local/etc/"
+mkdir -p /usr/local/etc/
+cp dnscrypt-proxy.toml /usr/local/etc/dnscrypt-proxy.toml
+ok
+
 running "Running brew bundle...";
 brew bundle;
 if [[ $? != 0 ]]; then
@@ -42,6 +47,11 @@ if [[ $? != 0 ]]; then
         exit 2
 fi
 ok "brew bundle complete";
+
+running "setting DNS resolver to local proxy"
+networksetup -setdnsservers Wi-Fi 0.0.0.0
+dscacheutil -flushcache
+ok
 
 export GOPATH=$HOME
 mkdir -p $GOPATH/src $GOPATH/pkg $GOPATH/bin
