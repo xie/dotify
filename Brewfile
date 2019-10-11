@@ -11,6 +11,7 @@ tap 'homebrew/cask-fonts' || true
 tap 'homebrew/cask-versions' || true
 tap 'homebrew/core' || true
 tap 'homebrew/services' || true
+tap 'lautis/refined-github-safari' || true
 
 # fonts
 cask 'font-meslo-lg'
@@ -37,6 +38,8 @@ brew 'autojump'
 brew 'awk'
 brew 'bash'
 brew 'bat'
+brew 'cmake'
+brew 'coreutils'
 brew 'dep'
 brew 'diff-so-fancy'
 brew 'dnscrypt-proxy', restart_service: true
@@ -68,6 +71,7 @@ cask '1password'
 cask 'aerial'
 cask 'appcleaner'
 cask 'beardedspice'
+cask 'discord'
 cask 'docker-edge'
 cask 'go2shell'
 cask 'goland'
@@ -76,11 +80,14 @@ cask 'gpg-suite'
 cask 'iina'
 cask 'iterm2'
 cask 'java'
+cask 'ngrok'
 cask 'open-in-code'
 cask 'slack'
 cask 'spectacle'
 cask 'visual-studio-code'
 cask 'yubico-authenticator'
+cask 'zoomus'
+cask 'lautis/refined-github-safari/refined-github-safari'
 
 # appstore apps
 mas "Backtrack", id: 1477089520
