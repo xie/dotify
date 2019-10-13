@@ -12,7 +12,7 @@ xcode-select --install
 set_computer_info
 
 # copy dotfiles
-mkdir ~/.dotfiles/
+mkdir -p ~/.dotfiles/zsh_files
 cp config/.* ~/.dotfiles/
 cp zsh_files/.* ~/.dotfiles/zsh_files/
 cp .zshrc ~/.dotfiles/

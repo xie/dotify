@@ -30,6 +30,7 @@ brew 'python'
 brew 'rbenv'
 brew 'ruby-build'
 brew 'rust'
+cask 'java'
 
 # utilities
 brew 'autoconf'
@@ -81,7 +82,6 @@ cask 'google-cloud-sdk'
 cask 'gpg-suite'
 cask 'iina'
 cask 'iterm2'
-cask 'java'
 cask 'ngrok'
 cask 'open-in-code'
 cask 'slack'
@@ -92,7 +92,10 @@ cask 'zoomus'
 cask 'lautis/refined-github-safari/refined-github-safari'
 
 # appstore apps
-mas "Backtrack", id: 1477089520
-mas "Pages", id: 409201541
-mas "Wipr", id: 1320666476
+mas 'Backtrack', id: 1477089520
+mas 'Keynote', id: 409183694
+mas 'Numbers', id: 409203825
+mas 'Pages', id: 409201541
+mas 'Twitter', id: 1482454543
+mas 'Wipr', id: 1320666476
 mas 'WireGuard', id: 1451685025
