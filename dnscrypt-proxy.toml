@@ -70,10 +70,10 @@ doh_servers = true
 require_dnssec = true
 
 # Server must not log user queries (declarative)
-require_nolog = false
+require_nolog = true
 
 # Server must not enforce its own blacklist (for parental control, ads blocking...)
-require_nofilter = false
+require_nofilter = true
 
 # Server names to avoid even if they match all criteria
 disabled_server_names = []
