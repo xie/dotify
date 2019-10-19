@@ -1,16 +1,23 @@
+# shellcheck disable=SC2034
 DEFAULT_USER=adi
-export ZSH="/Users/adi/.oh-my-zsh"
-export GOPATH=$HOME
-export PATH=$PATH:$GOPATH/bin
-export EDITOR=nano
-export PATH=~/.npm-global/bin:$PATH
 
+export ZSH="/Users/adi/.oh-my-zsh"
+
+export GOPATH=$HOME
+export GO111MODULE=on
+
+export EDITOR=nano
+export PATH=~/.npm-global/bin:$GOPATH/bin:/usr/local/sbin:$PATH
+
+# shellcheck disable=SC2034
 ZSH_THEME="agnoster"
 
 export UPDATE_ZSH_DAYS=5
 
+# shellcheck disable=SC2034
 COMPLETION_WAITING_DOTS="true"
 
+# shellcheck disable=SC2034
 plugins=(
   autoupdate
   autojump
@@ -26,11 +33,20 @@ plugins=(
   zsh-autosuggestions
 )
 
+# shellcheck disable=SC1090
 source $ZSH/oh-my-zsh.sh
 
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+# shellcheck disable=SC1091
+if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'; 
+fi
 
+# shellcheck disable=SC1091
+if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'; 
+fi
+
+# shellcheck disable=SC1090
 for file in ~/.dotfiles/zsh_files/.{aliases,functions}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
@@ -50,4 +66,10 @@ fi
 
 if [ -x "$(command -v rbenv)" ]; then
   eval "$(rbenv init -)"
+fi
+
+# shellcheck disable=SC1091
+# load dev, but only if present
+if [ -f '/opt/dev/dev.sh' ]; then
+  source '/opt/dev/dev.sh'; 
 fi
