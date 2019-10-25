@@ -10,7 +10,6 @@ tap 'homebrew/cask-drivers' || true
 tap 'homebrew/cask-fonts' || true
 tap 'homebrew/cask-versions' || true
 tap 'homebrew/core' || true
-tap 'homebrew/services' || true
 tap 'lautis/refined-github-safari' || true
 
 # fonts
@@ -43,7 +42,6 @@ brew 'cmake'
 brew 'coreutils'
 brew 'dep'
 brew 'diff-so-fancy'
-brew 'dnscrypt-proxy'
 brew 'draft'
 brew 'fd'
 brew 'ffmpeg'

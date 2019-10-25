@@ -43,21 +43,10 @@ if [[ $? != 0 ]]; then
 fi
 ok "brew bundle complete";
 
-running "copying dnscrypt-proxy.toml to /usr/local/etc/"
-mkdir -p /usr/local/etc/
-cp dnscrypt-proxy.toml /usr/local/etc/dnscrypt-proxy.toml
-ok
-
-running "setting DNS resolver to local proxy"
-sudo brew services start dnscrypt-proxy
-networksetup -setdnsservers Wi-Fi 127.0.0.1
-dscacheutil -flushcache
-ok
-
 export GOPATH=$HOME
 mkdir -p $GOPATH/src $GOPATH/pkg $GOPATH/bin
 
-# setup rbenv & install ruby 
+# setup rbenv & install ruby
 RUBY_VERSION=2.6.5
 echo "🦄  ruby" $RUBY_VERSION
 running "rbenv install ruby:$RUBY_VERSION"
