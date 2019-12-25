@@ -47,7 +47,7 @@ export GOPATH=$HOME
 mkdir -p $GOPATH/src $GOPATH/pkg $GOPATH/bin
 
 # setup rbenv & install ruby
-RUBY_VERSION=2.6.5
+RUBY_VERSION=2.7.0
 echo "🦄  ruby" $RUBY_VERSION
 running "rbenv install ruby:$RUBY_VERSION"
 rbenv install -s $RUBY_VERSION
