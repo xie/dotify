@@ -75,25 +75,21 @@ cask 'beardedspice'
 cask 'docker-edge'
 cask 'firefox'
 cask 'go2shell'
-cask 'goland'
 cask 'google-cloud-sdk'
 cask 'gpg-suite'
-cask 'iina'
 cask 'iterm2'
 cask 'ngrok'
 cask 'open-in-code'
-cask 'slack'
 cask 'spectacle'
 cask 'visual-studio-code'
+cask 'vlc'
 cask 'yubico-authenticator'
 cask 'zoomus'
 cask 'lautis/refined-github-safari/refined-github-safari'
 
 # appstore apps
-mas 'Backtrack', id: 1477089520
+mas "Cascadea", id: 1432182561
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
-mas 'Twitter', id: 1482454543
 mas 'Wipr', id: 1320666476
-mas 'WireGuard', id: 1451685025
