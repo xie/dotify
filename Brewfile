@@ -4,6 +4,7 @@ cask_args appdir: '/Applications'
 tap 'azure/draft' || true
 tap 'beeftornado/rmtree' || true
 tap 'buo/cask-upgrade' || true
+tap 'epk/epk' || true
 tap 'homebrew/bundle' || true
 tap 'homebrew/cask' || true
 tap 'homebrew/cask-drivers' || true
@@ -16,6 +17,7 @@ tap 'lautis/refined-github-safari' || true
 cask 'font-meslo-lg'
 cask 'font-meslo-for-powerline'
 cask 'font-meslo-nerd-font'
+cask 'font-sf-mono-powerline'
 
 # version control
 brew 'gist'
