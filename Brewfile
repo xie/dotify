@@ -14,10 +14,8 @@ tap 'homebrew/core' || true
 tap 'lautis/refined-github-safari' || true
 
 # fonts
-cask 'font-meslo-lg'
-cask 'font-meslo-for-powerline'
 cask 'font-meslo-nerd-font'
-cask 'font-sf-mono-powerline'
+cask 'font-sf-mono-nerd-font'
 
 # version control
 brew 'gist'
