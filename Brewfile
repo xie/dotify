@@ -82,12 +82,13 @@ cask 'gpg-suite'
 cask 'iterm2'
 cask 'ngrok'
 cask 'open-in-code'
+cask 'refined-github-safari'
+cask 'slack'
 cask 'spectacle'
 cask 'visual-studio-code'
 cask 'vlc'
 cask 'yubico-authenticator'
 cask 'zoomus'
-cask 'lautis/refined-github-safari/refined-github-safari'
 
 # appstore apps
 mas "Cascadea", id: 1432182561
