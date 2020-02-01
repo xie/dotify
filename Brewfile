@@ -5,13 +5,15 @@ tap 'azure/draft' || true
 tap 'beeftornado/rmtree' || true
 tap 'buo/cask-upgrade' || true
 tap 'epk/epk' || true
+tap 'github/gh' || true
+tap 'golangci/tap' || true
 tap 'homebrew/bundle' || true
 tap 'homebrew/cask' || true
 tap 'homebrew/cask-drivers' || true
 tap 'homebrew/cask-fonts' || true
 tap 'homebrew/cask-versions' || true
 tap 'homebrew/core' || true
-tap 'lautis/refined-github-safari' || true
+tap 'shopify/shopify' || true
 
 # fonts
 cask 'font-meslo-nerd-font'
@@ -21,6 +23,7 @@ cask 'font-sf-mono-nerd-font'
 brew 'gist'
 brew 'git'
 brew 'hub'
+brew 'gh'
 
 # languages
 brew 'go'
@@ -40,14 +43,16 @@ brew 'bash'
 brew 'bat'
 brew 'cmake'
 brew 'coreutils'
-brew 'dep'
 brew 'diff-so-fancy'
+brew 'dive'
 brew 'draft'
 brew 'fd'
 brew 'ffmpeg'
 brew 'fzf'
 brew 'openssl'
 brew 'jq'
+brew 'kubectx'
+brew 'kustomize'
 brew 'kubernetes-cli'
 brew 'kubernetes-helm'
 brew 'lsd'
@@ -57,14 +62,19 @@ brew 'mysql'
 brew 'nano'
 brew 'nmap'
 brew 'neovim'
+brew 'octant'
 brew 'protobuf'
 brew 'ripgrep'
+brew 'shadownenv'
 brew 'shellcheck'
 brew 'skaffold'
+brew 'stern'
 brew 'tmux'
 brew 'watch'
 brew 'wget'
+brew 'yamllint'
 brew 'yq'
+brew 'zlib'
 brew 'zsh'
 
 # applications
@@ -80,8 +90,6 @@ cask 'gpg-suite'
 cask 'iterm2'
 cask 'ngrok'
 cask 'open-in-code'
-cask 'refined-github-safari'
-cask 'slack'
 cask 'spectacle'
 cask 'visual-studio-code'
 cask 'vlc'
@@ -89,7 +97,6 @@ cask 'yubico-authenticator'
 cask 'zoomus'
 
 # appstore apps
-mas "Cascadea", id: 1432182561
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
