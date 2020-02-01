@@ -9,13 +9,13 @@ export GO111MODULE=on
 export EDITOR=nano
 export PATH=~/.npm-global/bin:$GOPATH/bin:/usr/local/sbin:$PATH
 
+export DOCKER_BUILDKIT=1
+
 # shellcheck disable=SC2034
-ZSH_THEME="agnoster"
+ZSH_THEME="spaceship"
 
 export UPDATE_ZSH_DAYS=5
 
-# shellcheck disable=SC2034
-COMPLETION_WAITING_DOTS="true"
 
 # shellcheck disable=SC2034
 plugins=(
@@ -53,7 +53,6 @@ done;
 
 #kubectl-short-aliases
 alias k=kubectl
-complete -o default -F __start_kubectl k
 
 # Neovim
 alias vi=nvim
@@ -71,5 +70,7 @@ fi
 # shellcheck disable=SC1091
 # load dev, but only if present
 if [ -f '/opt/dev/dev.sh' ]; then
-  source '/opt/dev/dev.sh'; 
+  source '/opt/dev/dev.sh';
 fi
+
+export KUBECONFIG=/Users/adi/.kube/config.shopify.cloudplatform:/Users/adi/.kube/config
