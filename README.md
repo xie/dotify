@@ -7,6 +7,9 @@ Things not automated yet:
 - macOS Settings
   - `defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1`
   - `defaults write -g PMPrintingExpandedStateForPrint -bool TRUE`
+  - `defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES; killall Finder`
+  - `defaults write com.apple.dock autohide-time-modifier -float 0.12; killall Dock`
+
   - More things via GUI
 
 - Finder Preferences:
