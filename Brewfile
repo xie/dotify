@@ -13,7 +13,6 @@ tap 'homebrew/cask-drivers' || true
 tap 'homebrew/cask-fonts' || true
 tap 'homebrew/cask-versions' || true
 tap 'homebrew/core' || true
-tap 'shopify/shopify' || true
 
 # fonts
 cask 'font-meslo-nerd-font'
@@ -29,7 +28,6 @@ brew 'gh'
 brew 'go'
 brew 'node'
 brew 'python'
-brew 'rbenv'
 brew 'ruby-build'
 brew 'rust'
 cask 'java'
@@ -65,7 +63,6 @@ brew 'neovim'
 brew 'octant'
 brew 'protobuf'
 brew 'ripgrep'
-brew 'shadownenv'
 brew 'shellcheck'
 brew 'skaffold'
 brew 'stern'
@@ -79,18 +76,19 @@ brew 'zsh'
 
 # applications
 cask '1password'
+cask 'alacritty'
 cask 'aerial'
 cask 'appcleaner'
 cask 'beardedspice'
 cask 'docker-edge'
-cask 'firefox'
+cask 'google-chrome'
 cask 'go2shell'
 cask 'google-cloud-sdk'
 cask 'gpg-suite'
 cask 'iterm2'
 cask 'ngrok'
 cask 'open-in-code'
-cask 'spectacle'
+cask 'rectangle'
 cask 'visual-studio-code'
 cask 'vlc'
 cask 'yubico-authenticator'
