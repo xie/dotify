@@ -35,7 +35,6 @@ cask 'java'
 # utilities
 brew 'autoconf'
 brew 'automake'
-brew 'autojump'
 brew 'awk'
 brew 'bash'
 brew 'bat'
