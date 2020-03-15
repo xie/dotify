@@ -12,3 +12,10 @@ alias reload!='. ~/.zshrc'
 
 #get IP address
 alias localip="ipconfig getifaddr en0"
+
+#kubectl-short-aliases
+alias k=kubectl
+
+# Neovim
+alias vi=nvim
+alias vim=nvim
