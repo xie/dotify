@@ -12,15 +12,13 @@ export PATH=~/.npm-global/bin:$GOPATH/bin:/usr/local/sbin:$PATH
 export DOCKER_BUILDKIT=1
 
 # shellcheck disable=SC2034
-ZSH_THEME="spaceship"
+ZSH_THEME="agnoster"
 
 export UPDATE_ZSH_DAYS=5
-
 
 # shellcheck disable=SC2034
 plugins=(
   autoupdate
-  autojump
   colorize
   colored-man-pages
   docker
@@ -61,10 +59,6 @@ alias vim=nvim
 #hub => git
 if [ -x "$(command -v hub)" ]; then
   eval "$(hub alias -s)"
-fi
-
-if [ -x "$(command -v rbenv)" ]; then
-  eval "$(rbenv init -)"
 fi
 
 # shellcheck disable=SC1091
