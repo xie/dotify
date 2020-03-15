@@ -49,13 +49,6 @@ for file in ~/.dotfiles/zsh_files/.{aliases,functions}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
-#kubectl-short-aliases
-alias k=kubectl
-
-# Neovim
-alias vi=nvim
-alias vim=nvim
-
 #hub => git
 if [ -x "$(command -v hub)" ]; then
   eval "$(hub alias -s)"
