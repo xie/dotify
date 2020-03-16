@@ -29,10 +29,12 @@ brew 'go'
 brew 'node'
 brew 'python'
 brew 'ruby-build'
+brew 'rbenv'
 brew 'rust'
 cask 'java'
 
 # utilities
+brew 'autojump'
 brew 'autoconf'
 brew 'automake'
 brew 'awk'
