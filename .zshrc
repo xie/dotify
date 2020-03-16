@@ -55,10 +55,14 @@ if [ -x "$(command -v hub)" ]; then
   eval "$(hub alias -s)"
 fi
 
+if [ -x "$(command -v rbenv)" ]; then
+  eval "$(rbenv init -)"
+fi
+
 # shellcheck disable=SC1091
 # load dev, but only if present
-if [ -f '/opt/dev/dev.sh' ]; then
-  source '/opt/dev/dev.sh';
-fi
+#if [ -f '/opt/dev/dev.sh' ]; then
+#  source '/opt/dev/dev.sh';
+#fi
 
 export KUBECONFIG=/Users/adi/.kube/config.shopify.cloudplatform:/Users/adi/.kube/config
