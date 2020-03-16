@@ -20,26 +20,26 @@ cp .zshrc ~/.dotfiles/
 # homebrew
 if [ -x /usr/local/bin/brew ];
 then
-    running "Skipping install of brew. It is already installed.";
-    running "Updating brew..."
-    brew update;
-    running "Updated brew."
-    ok
+  running "Skipping install of brew. It is already installed.";
+  running "Updating brew..."
+  brew update;
+  running "Updated brew."
+  ok
 else
-    running "installing brew"
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    if [[ $? != 0 ]]; then
-        error "unable to install homebrew -> quitting setup"
-        exit 2
-    fi
-    ok
+  running "installing brew"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  if [[ $? != 0 ]]; then
+    error "unable to install homebrew -> quitting setup"
+    exit 2
+  fi
+  ok
 fi
 
 running "Running brew bundle...";
 brew bundle;
 if [[ $? != 0 ]]; then
-        error "brew bundle could not complete"
-        exit 2
+  error "brew bundle could not complete"
+  exit 2
 fi
 ok "brew bundle complete";
 
@@ -109,9 +109,9 @@ ok
 bot "setting zsh as the user shell"
 CURRENTSHELL=$(dscl . -read /Users/$USER UserShell | awk '{print $2}')
 if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
-    bot "setting newer homebrew zsh (/usr/local/bin/zsh) as your shell (password required)"
-    sudo dscl . -change /Users/$USER UserShell $SHELL /usr/local/bin/zsh > /dev/null 2>&1
-    ok
+  bot "setting newer homebrew zsh (/usr/local/bin/zsh) as your shell (password required)"
+  sudo dscl . -change /Users/$USER UserShell $SHELL /usr/local/bin/zsh > /dev/null 2>&1
+  ok
 fi
 
 bot "installing visual-studio-code extensions"

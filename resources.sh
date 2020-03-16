@@ -44,12 +44,12 @@ function confirmed() {
 }
 
 function set_computer_info() {
-    echo -e "$COL_MAGENTA Enter your computer name$COL_RESET: "
-    read cpname
+  echo -e "$COL_MAGENTA Enter your computer name$COL_RESET: "
+  read cpname
 
-    sudo scutil --set ComputerName "$cpname"
-    sudo scutil --set HostName "$cpname"
-    sudo scutil --set LocalHostName "$cpname"
+  sudo scutil --set ComputerName "$cpname"
+  sudo scutil --set HostName "$cpname"
+  sudo scutil --set LocalHostName "$cpname"
 }
 
 function SSH_Keygen() {
