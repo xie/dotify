@@ -5,6 +5,8 @@ export ZSH="/Users/adi/.oh-my-zsh"
 
 export GOPATH=$HOME
 export GO111MODULE=on
+export GOPRIVATE="github.com/Shopify/*"
+export CGO_ENABLED=0
 
 export EDITOR=nano
 export PATH=~/.npm-global/bin:$GOPATH/bin:/usr/local/sbin:$PATH
@@ -61,8 +63,8 @@ fi
 
 # shellcheck disable=SC1091
 # load dev, but only if present
-#if [ -f '/opt/dev/dev.sh' ]; then
-#  source '/opt/dev/dev.sh';
-#fi
+if [ -f '/opt/dev/dev.sh' ]; then
+  source '/opt/dev/dev.sh';
+fi
 
 export KUBECONFIG=/Users/adi/.kube/config.shopify.cloudplatform:/Users/adi/.kube/config
