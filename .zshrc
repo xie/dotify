@@ -18,6 +18,7 @@ export UPDATE_ZSH_DAYS=5
 
 # shellcheck disable=SC2034
 plugins=(
+  autojump
   autoupdate
   colorize
   colored-man-pages
@@ -36,12 +37,12 @@ source $ZSH/oh-my-zsh.sh
 
 # shellcheck disable=SC1091
 if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then
-  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'; 
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc';
 fi
 
 # shellcheck disable=SC1091
 if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then
-  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'; 
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc';
 fi
 
 # shellcheck disable=SC1090
