@@ -19,3 +19,6 @@ alias k=kubectl
 # Neovim
 alias vi=nvim
 alias vim=nvim
+
+alias shop="cd ~/src/github.com/Shopify"
+alias epk="cd ~/src/github.com/epk"
