@@ -46,6 +46,14 @@ ok "brew bundle complete";
 export GOPATH=$HOME
 mkdir -p $GOPATH/src $GOPATH/pkg $GOPATH/bin
 
+# setup rbenv & install ruby
+ RUBY_VERSION=2.7.0
+ echo "🦄  ruby" $RUBY_VERSION
+ running "rbenv install ruby:$RUBY_VERSION"
+ rbenv install -s $RUBY_VERSION
+ rbenv global $RUBY_VERSION
+ ok rbenv
+ 
 running "npm settings"
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
@@ -104,6 +112,11 @@ ok
 # hard link .gitignore
 running "linking .gitignore"
 ln ~/.dotfiles/.gitignore ~/.gitignore
+ok
+
+# hard link .gitattributes
+running "linking .gitattributes"
+ln ~/.dotfiles/.gitattributes ~/.gitattributes
 ok
 
 bot "setting zsh as the user shell"

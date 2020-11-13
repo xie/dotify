@@ -6,10 +6,9 @@ export ZSH="/Users/adi/.oh-my-zsh"
 export GOPATH=$HOME
 export GO111MODULE=on
 export GOPRIVATE="github.com/Shopify/*"
-export CGO_ENABLED=0
 
 export EDITOR=nano
-export PATH=~/.npm-global/bin:$GOPATH/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/.npm-global/bin:$GOPATH/bin:$HOME/.krew/bin:/usr/local/sbin:$PATH
 
 export DOCKER_BUILDKIT=1
 
@@ -25,7 +24,6 @@ plugins=(
   colorize
   colored-man-pages
   docker
-  docker-compose
   fast-syntax-highlighting
   git
   history-substring-search

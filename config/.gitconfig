@@ -1,7 +1,6 @@
 [user]
 	name = Aditya Sharma
 	email = git@adi.run
-	signingKey = 9C2F550E36E32C3C
 
 [core]
 	editor = nano
@@ -9,12 +8,10 @@
 	excludesfile = ~/.gitignore
 	commitGraph = true
 	pager = diff-so-fancy | less --tabs=4 -RFX
-
-[commit]
-	gpgsign = true
+	attributesfile = ~/.gitattributes
 
 [web]
-	browser = chrome
+	browser = safari
 
 [rerere]
 	enabled = 1
