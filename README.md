@@ -6,10 +6,6 @@ Things not automated yet:
 
 - macOS Settings
   - `defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1`
-  - `defaults write -g PMPrintingExpandedStateForPrint -bool TRUE`
-  - `defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES; killall Finder`
-  - `defaults write com.apple.dock autohide-time-modifier -float 0.12; killall Dock`
-
   - More things via GUI
 
 - Finder Preferences:
@@ -20,12 +16,8 @@ Things not automated yet:
 
 - TouchID for sudo (<https://github.com/Reflejo/pam-touchID)>
 
-- GPG Import + Setup
-
-- BeardedSpice Extras: Youtube Music Addon (<https://github.com/beardedspice/beardedspice/issues/805)>
-
 - iTerm Preferences
 
-- Install Hangouts Electron Wrapper
-
 - Probably more
+
+- https://github.com/trapd00r/LS_COLORS
