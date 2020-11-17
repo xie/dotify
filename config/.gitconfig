@@ -10,9 +10,6 @@
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	attributesfile = ~/.gitattributes
 
-[web]
-	browser = safari
-
 [rerere]
 	enabled = 1
 	autoupdate = 1
