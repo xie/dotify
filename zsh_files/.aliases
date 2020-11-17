@@ -20,5 +20,9 @@ alias k=kubectl
 alias vi=nvim
 alias vim=nvim
 
+# dirs
 alias shop="cd ~/src/github.com/Shopify"
 alias epk="cd ~/src/github.com/epk"
+
+# ls
+alias ls=lsd

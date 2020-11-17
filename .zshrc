@@ -35,6 +35,9 @@ plugins=(
 # shellcheck disable=SC1090
 source $ZSH/oh-my-zsh.sh
 
+# Python 3.9 incompat with gcloud
+export CLOUDSDK_PYTHON="/usr/local/opt/python@3.8/libexec/bin/python"
+
 # shellcheck disable=SC1091
 if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc';
