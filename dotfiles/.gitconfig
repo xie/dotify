@@ -79,3 +79,5 @@
 	protocol = https
 [pull]
 	rebase = true
+[credential]
+	helper = osxkeychain

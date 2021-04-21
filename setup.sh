@@ -11,12 +11,6 @@ xcode-select --install
 # set computer info
 set_computer_info
 
-# copy dotfiles
-mkdir -p ~/.dotfiles/zsh_files
-cp config/.* ~/.dotfiles/
-cp zsh_files/.* ~/.dotfiles/zsh_files/
-cp .zshrc ~/.dotfiles/
-
 # homebrew
 if [ -x /usr/local/bin/brew ];
 then
@@ -89,7 +83,6 @@ git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins.git \
 ok
 
 running "downloading Argonaut.itermcolors"
-wget --quiet https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Argonaut.itermcolors -P ~/Downloads/
 wget --quiet https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/terminal/Argonaut.terminal -P ~/Downloads/
 ok "Argonaut.itermcolors"
 
@@ -97,26 +90,6 @@ bot "installing nano syntax highlighting"
 git clone https://github.com/scopatz/nanorc.git ~/.nano
 echo "set linenumbers" >> ~/.nanorc
 cat ~/.nano/nanorc >> ~/.nanorc
-ok
-
-# hard link .zshrc
-running "linking your .zshrc!"
-ln ~/.dotfiles/.zshrc ~/.zshrc
-ok
-
-# hard link .gitconfig
-running "linking .gitconfig"
-ln ~/.dotfiles/.gitconfig ~/.gitconfig
-ok
-
-# hard link .gitignore
-running "linking .gitignore"
-ln ~/.dotfiles/.gitignore ~/.gitignore
-ok
-
-# hard link .gitattributes
-running "linking .gitattributes"
-ln ~/.dotfiles/.gitattributes ~/.gitattributes
 ok
 
 bot "setting zsh as the user shell"
@@ -127,9 +100,7 @@ if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
   ok
 fi
 
-bot "installing visual-studio-code extensions"
-code --install-extension "shan.code-settings-sync"
-ok
+symlink_dot_files
 
 running "sourcing zshrc"
 source ~/.zshrc

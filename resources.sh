@@ -60,3 +60,12 @@ function SSH_Keygen() {
   cat sshconfig > ~/.ssh/config
   ssh-add -K ~/.ssh/id_ed25519
 }
+
+function symlink_dot_files() {
+   dir="$(git rev-parse --show-toplevel)/dotfiles"
+
+   for file in aliases functions gitattributes gitconfig gitignore zshrc; do
+     echo "Creating symlink to $file in home directory."
+     ln -sfnv $dir/.$file ~/.$file
+   done
+}

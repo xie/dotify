@@ -49,7 +49,7 @@ if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion
 fi
 
 # shellcheck disable=SC1090
-for file in ~/.dotfiles/zsh_files/.{aliases,functions}; do
+for file in ~/.{aliases,functions}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
