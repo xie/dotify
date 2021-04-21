@@ -35,9 +35,6 @@ plugins=(
 # shellcheck disable=SC1090
 source $ZSH/oh-my-zsh.sh
 
-# Python 3.9 incompat with gcloud
-export CLOUDSDK_PYTHON="/usr/local/opt/python@3.8/libexec/bin/python"
-
 # shellcheck disable=SC1091
 if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc';
@@ -65,3 +62,6 @@ fi
 eval $(gdircolors $HOME/.LS_COLORS)
 
 export KUBECONFIG=/Users/adi/.kube/config.shopify.cloudplatform:/Users/adi/.kube/config
+
+[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
+if [ -e /Users/adi/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/adi/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

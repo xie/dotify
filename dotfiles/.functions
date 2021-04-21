@@ -14,3 +14,7 @@ function dev {
   source /opt/dev/dev.sh
   dev $@
 }
+
+function update-kubeconfig {
+  gsutil cp gs://cluster-info/kubeconfig.yml $HOME/.kube/config.shopify.cloudplatform
+}
