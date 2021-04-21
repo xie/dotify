@@ -73,6 +73,7 @@ brew 'zsh'
 
 # applications
 cask 'appcleaner'
+cask 'discord'
 cask 'docker'
 cask 'google-cloud-sdk'
 cask 'ngrok'
