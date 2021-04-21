@@ -26,7 +26,6 @@ brew 'go'
 brew 'node'
 brew 'python'
 brew 'ruby-build'
-brew 'rbenv'
 brew 'rust'
 
 # utilities
@@ -73,7 +72,6 @@ brew 'zlib'
 brew 'zsh'
 
 # applications
-cask 'airbuddy'
 cask 'appcleaner'
 cask 'docker'
 cask 'google-cloud-sdk'
