@@ -64,7 +64,7 @@ function SSH_Keygen() {
 function symlink_dot_files() {
    dir="$(git rev-parse --show-toplevel)/dotfiles"
 
-   for file in aliases functions gitattributes gitconfig gitignore zshrc; do
+   for file in aliases functions gitattributes gitconfig gitignore zshrc LS_COLORS; do
      echo "Creating symlink to $file in home directory."
      ln -sfnv $dir/.$file ~/.$file
    done
