@@ -56,6 +56,7 @@ brew 'mas'
 brew 'mysql'
 brew 'nano'
 brew 'nmap'
+brew "node_exporter", restart_service: true
 brew 'neovim'
 brew 'octant'
 brew 'protobuf'
