@@ -41,12 +41,12 @@ export GOPATH=$HOME
 mkdir -p $GOPATH/src $GOPATH/pkg $GOPATH/bin
 
 # setup rbenv & install ruby
- RUBY_VERSION=2.7.0
- echo "🦄  ruby" $RUBY_VERSION
- running "rbenv install ruby:$RUBY_VERSION"
- rbenv install -s $RUBY_VERSION
- rbenv global $RUBY_VERSION
- ok rbenv
+# RUBY_VERSION=2.7.0
+# echo "🦄  ruby" $RUBY_VERSION
+# running "rbenv install ruby:$RUBY_VERSION"
+# rbenv install -s $RUBY_VERSION
+# rbenv global $RUBY_VERSION
+# ok rbenv
  
 running "npm settings"
 mkdir ~/.npm-global
@@ -83,6 +83,7 @@ git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins.git \
 ok
 
 running "downloading Argonaut.itermcolors"
+wget --quiet https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Argonaut.itermcolors -P ~/Downloads/
 wget --quiet https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/terminal/Argonaut.terminal -P ~/Downloads/
 ok "Argonaut.itermcolors"
 
