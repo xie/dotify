@@ -47,7 +47,7 @@ mkdir -p $GOPATH/src $GOPATH/pkg $GOPATH/bin
 # rbenv install -s $RUBY_VERSION
 # rbenv global $RUBY_VERSION
 # ok rbenv
- 
+
 running "npm settings"
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
@@ -67,10 +67,10 @@ git clone https://github.com/zsh-users/zsh-history-substring-search \
   ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search
 ok
 
-# running "installing zsh-fast-syntax-highlighting"
-# git clone https://github.com/zdharma/fast-syntax-highlighting.git \
-#  ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
-# ok
+running "installing zsh-fast-syntax-highlighting"
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
+  ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
+ok
 
 running "installing zsh-you-should-use"
 git clone https://github.com/MichaelAquilina/zsh-you-should-use.git \

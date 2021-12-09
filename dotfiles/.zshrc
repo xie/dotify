@@ -26,6 +26,7 @@ plugins=(
   colorize
   colored-man-pages
   docker
+  fast-syntax-highlighting
   git
   history-substring-search
   vscode
@@ -66,3 +67,7 @@ export KUBECONFIG=/Users/adi/.kube/config.shopify.cloudplatform
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 if [ -e /Users/adi/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/adi/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+[[ -f /opt/dev/sh/chruby/chruby.sh ]] && type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; }
+
+[[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
