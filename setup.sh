@@ -83,7 +83,7 @@ git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins.git \
 ok
 
 running "downloading Argonaut.itermcolors"
-wget --quiet https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Argonaut.itermcolors -P ~/Downloads/
+# wget --quiet https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Argonaut.itermcolors -P ~/Downloads/
 wget --quiet https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/terminal/Argonaut.terminal -P ~/Downloads/
 ok "Argonaut.itermcolors"
 
