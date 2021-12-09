@@ -107,6 +107,12 @@ symlink_dot_files
 running "sourcing zshrc"
 source ~/.zshrc
 ok
+
+running "setup iterm prefs"
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "$PWD/iterm2"
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+ok
+
 SSH_Keygen
 bot "Setup complete"
 
