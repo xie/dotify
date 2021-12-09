@@ -1,7 +1,7 @@
 [user]
 	name = Aditya Sharma
 	email = git@adi.run
-	signingkey = 1BF32C879690E275DF57B69A0BC667A01BF811B8
+	signingkey = 04A32E9B91B3B86AFB6BE267C0C2E8F2F7C4409B
 
 [core]
 	editor = nano
@@ -88,7 +88,7 @@
 	insteadOf = git@github.com:shopify/
 	insteadOf = ssh://git@github.com/Shopify/
 	insteadOf = ssh://git@github.com/shopify/
+[gpg]
+	program = /opt/dev/bin/gpg-auto-pin
 [commit]
 	gpgSign = true
-[gpg]
-	program = /nix/var/nix/gcroots/dev-profiles/dev-support-dev-profile/bin/gpg

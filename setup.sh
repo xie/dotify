@@ -67,10 +67,10 @@ git clone https://github.com/zsh-users/zsh-history-substring-search \
   ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search
 ok
 
-running "installing zsh-fast-syntax-highlighting"
-git clone https://github.com/zdharma/fast-syntax-highlighting.git \
-  ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
-ok
+# running "installing zsh-fast-syntax-highlighting"
+# git clone https://github.com/zdharma/fast-syntax-highlighting.git \
+#  ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
+# ok
 
 running "installing zsh-you-should-use"
 git clone https://github.com/MichaelAquilina/zsh-you-should-use.git \
@@ -95,9 +95,10 @@ ok
 
 bot "setting zsh as the user shell"
 CURRENTSHELL=$(dscl . -read /Users/$USER UserShell | awk '{print $2}')
-if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
-  bot "setting newer homebrew zsh (/usr/local/bin/zsh) as your shell (password required)"
-  sudo dscl . -change /Users/$USER UserShell $SHELL /usr/local/bin/zsh > /dev/null 2>&1
+BREW_ZSH_PATH=$(brew --prefix zsh)
+if [[ "$CURRENTSHELL" != "$BREW_ZSH_PATH/bin/zsh" ]]; then
+  bot "setting newer homebrew zsh $BREW_ZSH_PATH/bin/zsh as your shell (password required)"
+  sudo dscl . -change /Users/$USER UserShell $SHELL $BREW_ZSH_PATH/bin/zsh
   ok
 fi
 

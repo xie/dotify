@@ -1,3 +1,5 @@
+[ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # shellcheck disable=SC2034
 DEFAULT_USER=adi
 
@@ -24,7 +26,6 @@ plugins=(
   colorize
   colored-man-pages
   docker
-  fast-syntax-highlighting
   git
   history-substring-search
   vscode
@@ -61,7 +62,7 @@ fi
 
 eval $(gdircolors $HOME/.LS_COLORS)
 
-export KUBECONFIG=/Users/adi/.kube/config.shopify.cloudplatform:/Users/adi/.kube/config
+export KUBECONFIG=/Users/adi/.kube/config.shopify.cloudplatform
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 if [ -e /Users/adi/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/adi/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
