@@ -1,4 +1,4 @@
-[ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+[[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
 
 # shellcheck disable=SC2034
 DEFAULT_USER=adi
@@ -37,19 +37,20 @@ plugins=(
 # shellcheck disable=SC1090
 source $ZSH/oh-my-zsh.sh
 
+BREW_PREFIX=$(brew --prefix)
 # shellcheck disable=SC1091
-if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then
-  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc';
+if [ -f "${BREW_PREFIX}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc" ]; then
+  source "$BREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc";
 fi
 
 # shellcheck disable=SC1091
-if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then
-  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc';
+if [ -f "$BREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc" ]; then
+  source "$BREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc";
 fi
 
 # shellcheck disable=SC1090
 for file in ~/.{aliases,functions}; do
-  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+  [ -r "$file" ] && [ -f "$file" ] && echo $file && source "$file";
 done;
 
 #hub => git
@@ -66,8 +67,5 @@ eval $(gdircolors $HOME/.LS_COLORS)
 export KUBECONFIG=/Users/adi/.kube/config.shopify.cloudplatform
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
-if [ -e /Users/adi/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/adi/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
 [[ -f /opt/dev/sh/chruby/chruby.sh ]] && type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; }
 
-[[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
