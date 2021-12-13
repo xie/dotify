@@ -5,12 +5,8 @@ DEFAULT_USER=adi
 
 export ZSH="/Users/adi/.oh-my-zsh"
 
-export GOPATH=$HOME
-export GO111MODULE=on
-export GOPRIVATE="github.com/Shopify/*"
-
 export EDITOR=nano
-export PATH=$HOME/.npm-global/bin:$GOPATH/bin:$HOME/.krew/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/.npm-global/bin:$HOME/.krew/bin:/usr/local/sbin:$PATH
 
 export DOCKER_BUILDKIT=1
 
@@ -69,3 +65,10 @@ export KUBECONFIG=/Users/adi/.kube/config.shopify.cloudplatform
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 [[ -f /opt/dev/sh/chruby/chruby.sh ]] && type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; }
 
+if [ -x "$(command -v gimme)" ]; then
+  eval "$(gimme 1.17.x)" > /dev/null 2>&1
+  export GOBIN=$GOROOT/bin
+  export GOPATH=$HOME
+  export GO111MODULE=on
+  export GOPRIVATE="github.com/Shopify/*"
+fi
