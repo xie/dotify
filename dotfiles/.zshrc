@@ -50,7 +50,7 @@ fi
 
 # shellcheck disable=SC1090
 for file in ~/.{aliases,functions}; do
-  [ -r "$file" ] && [ -f "$file" ] && echo $file && source "$file";
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
 #hub => git
