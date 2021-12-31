@@ -15,7 +15,7 @@ ZSH_THEME="agnoster"
 
 export UPDATE_ZSH_DAYS=5
 
-export FZF_BASE=$(which fzf)
+export FZF_BASE=$(command -v fzf)
 # shellcheck disable=SC2034
 plugins=(
   fzf
