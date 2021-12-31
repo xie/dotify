@@ -1,7 +1,6 @@
 [user]
 	name = Aditya Sharma
 	email = git@adi.run
-	signingkey = 04A32E9B91B3B86AFB6BE267C0C2E8F2F7C4409B
 
 [core]
 	editor = nano
@@ -80,14 +79,8 @@
 	protocol = https
 [pull]
 	rebase = true
-[credential]
-	helper = store --file /opt/dev/var/private/git_credential_store
 [url "https://github.com/Shopify/"]
 	insteadOf = git@github.com:Shopify/
 	insteadOf = git@github.com:shopify/
 	insteadOf = ssh://git@github.com/Shopify/
 	insteadOf = ssh://git@github.com/shopify/
-[gpg]
-	program = /opt/dev/bin/gpg-auto-pin
-[commit]
-	gpgSign = true
