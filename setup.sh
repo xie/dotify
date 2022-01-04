@@ -29,8 +29,20 @@ else
   ok
 fi
 
+bot "fetching brew packages";
+brew bundle list | tr '\n' ' ' | xargs brew fetch --deps --retry --quiet
+if [[ $? != 0 ]]; then
+  error "unable to pre fetch brew packages"
+fi
+
+bot "fetching brew cask packages";
+brew bundle list --casks | tr '\n' ' ' | xargs brew fetch --cask --retry --quiet
+if [[ $? != 0 ]]; then
+  error "unable to pre fetch brew cask packages"
+fi
+
 running "Running brew bundle...";
-brew bundle;
+brew bundle --no-lock;
 if [[ $? != 0 ]]; then
   error "brew bundle could not complete"
   exit 2
