@@ -1,9 +1,9 @@
 [[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
 
 # shellcheck disable=SC2034
-DEFAULT_USER=adi
+DEFAULT_USER=$(whoami)
 
-export ZSH="/Users/adi/.oh-my-zsh"
+export ZSH="/Users/$DEFAULT_USER/.oh-my-zsh"
 
 export EDITOR=nano
 export PATH=$HOME/.npm-global/bin:$HOME/.krew/bin:/usr/local/sbin:$PATH
@@ -62,7 +62,7 @@ fi
 
 eval $(gdircolors $HOME/.LS_COLORS)
 
-export KUBECONFIG=/Users/adi/.kube/config.shopify.cloudplatform
+export KUBECONFIG=/Users/$DEFAULT_USER/.kube/config.shopify.cloudplatform
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 [[ -f /opt/dev/sh/chruby/chruby.sh ]] && type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; }

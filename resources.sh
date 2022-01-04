@@ -62,10 +62,10 @@ function SSH_Keygen() {
 }
 
 function symlink_dot_files() {
-   dir="$(git rev-parse --show-toplevel)/dotfiles"
+  dir="$(git rev-parse --show-toplevel)/dotfiles"
 
-   for file in aliases functions gitattributes gitconfig gitignore zshrc LS_COLORS; do
-     echo "Creating symlink to $file in home directory."
-     ln -sfnv $dir/.$file ~/.$file
-   done
+  for file in aliases functions gitattributes gitconfig gitignore zshrc LS_COLORS; do
+    echo "Creating symlink to $file in home directory."
+    ln -sfnv $dir/.$file ~/.$file
+  done
 }
