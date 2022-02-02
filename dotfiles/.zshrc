@@ -68,7 +68,7 @@ export KUBECONFIG=/Users/$DEFAULT_USER/.kube/config.shopify.cloudplatform
 [[ -f /opt/dev/sh/chruby/chruby.sh ]] && type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; }
 
 if [ -x "$(command -v gimme)" ]; then
-  eval "$(gimme 1.18beta1)" > /dev/null 2>&1
+  eval "$(gimme 1.18beta2)" > /dev/null 2>&1
   export GOBIN=$GOROOT/bin
   export GOPATH=$HOME
   export GO111MODULE=on
