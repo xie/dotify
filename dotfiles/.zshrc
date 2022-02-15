@@ -62,15 +62,13 @@ fi
 
 eval $(gdircolors $HOME/.LS_COLORS)
 
-export KUBECONFIG=/Users/$DEFAULT_USER/.kube/config.shopify.cloudplatform
-
-[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
-[[ -f /opt/dev/sh/chruby/chruby.sh ]] && type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; }
-
-if [ -x "$(command -v gimme)" ]; then
-  eval "$(gimme 1.18beta2)" > /dev/null 2>&1
-  export GOBIN=$GOROOT/bin
-  export GOPATH=$HOME
-  export GO111MODULE=on
-  export GOPRIVATE="github.com/Shopify/*"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init --path)"
+  eval "$(pyenv init -)"
 fi
+if which pyenv-virtualenv-init > /dev/null; then
+  eval "$(pyenv virtualenv-init -)"
+fi
+
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+pyenv virtualenvwrapper_lazy
